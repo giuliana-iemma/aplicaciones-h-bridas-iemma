@@ -4,6 +4,7 @@
 
 //Task1
 let saldo = 100;
+//saldo = null;
 
 function obtenerSaldo(callback){
 //Consultar el saldo de mi cuenta bancaria
@@ -17,7 +18,6 @@ function obtenerSaldo(callback){
 function procesarDatos(data){
     console.log('Datos: ' + data);
 }
-
 
 
 //Task2: Obtener el precio del dolar Hoy
@@ -58,13 +58,91 @@ function obtenerPrecio (callback){
 
 //*Implementar una función principal (mainCallback) que llame a estas funciones en secuencia y muestre los resultados en la consola. 
 
-function mainCallback (){
+/* function mainCallback (){
     obtenerSaldo (procesarDatos);
     obtenerDolar (procesarDatos);
     obtenerPrecio (procesarDatos);
-}
+} */
 
 //DUDA: Sería así? Cómo haría si quiero que muestre cada dato por separado sin tener que armar una función de procesamiento de datos para cada uno de los tipos de datos?
 
-mainCallback ();
+//mainCallback ();
 
+//**Parte 2 : Promesas
+//* Convertir las funciones anteriores para que devuelvan promesas.
+const promiseSaldo = new Promise ((resolve, reject) => {
+    console.log('Promesa Pendiente');
+
+    if (saldo){
+        resolve ("Saldo obtenido")
+    } else {
+         reject ("No se pudo obtener el saldo")
+    }
+})
+
+promiseSaldo 
+    .then(resultado=>{
+        console.log(resultado);
+    })
+    .catch (error =>{
+        console.log(error); 
+    })
+    .finally (()=>{
+        console.log('Se obtuvo el saldo');
+    })
+
+const promiseDolar = new Promise ((resolve, reject) => {
+    console.log('Promesa Pendiente');
+
+    if (dolarHoy){
+        resolve ("Dolar obtenido: ")
+    } else {
+        reject ("No se pudo obtener el precio del dolar")
+    }
+})
+
+promiseDolar 
+    .then(resultado=>{
+        console.log(resultado);
+    })
+    .catch (error =>{
+        console.log(error); 
+    })
+    .finally (()=>{
+        console.log('Se obtuvo el dolar');
+    })
+
+const promisePrecio = new Promise ((resolve, reject) => {
+    console.log('Promesa pendiente');
+    
+    if (precioProducto){
+        resolve ("Precio obtenido")
+    } else {
+        reject ("No se pudo obtener el precio del producto")
+    }
+})
+
+promisePrecio
+    .then (resultado =>{
+        console.log('resultado');
+    })
+    .catch (error =>{
+        console.log(error);
+    })
+    .finally (()=>{
+        console.log('Se obtuvo el precio del producto');
+        
+    })
+
+//DUDA: Como hago para integrar los tres datos y convertir el saldo a dolar
+
+
+//* Usar Promise.all para ejecutar todas las funciones en paralelo y mostrar los resultados en la consola. 
+Promise.all([promiseSaldo, promiseDolar, promisePrecio])
+    .then(resultados=>{
+        console.log(resultados);
+    })
+    .catch(error=>{
+        console.log(error);
+        
+    })
