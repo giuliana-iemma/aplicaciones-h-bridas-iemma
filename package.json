@@ -1,0 +1,16 @@
+{
+  "name": "desafios",
+  "version": "1.0.0",
+  "description": "Desafíos de la materia Aplicaciones Híbridas en Escuela Da Vinci",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giuliana-iemma/desafios.git"
+  },
+  "author": "Giuliana Iemma",
+  "license": "ISC"
+}
