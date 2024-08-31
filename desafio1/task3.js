@@ -52,3 +52,5 @@ async function mostrarDatos (){
 mostrarDatos();
 
 //Modificar las funciones y la lógica principal para manejar errores
+
+//DUDA: No se si falta algo en cuestión de manejo de errores. Me queda resolver cómo haría para integrar estos datos. Debería crear una nueva función y promesa o sería dentro de las mismas ya creadas?
