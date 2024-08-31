@@ -19,7 +19,6 @@ function procesarDatos(data){
     console.log('Datos: ' + data);
 }
 
-
 //Task2: Obtener el precio del dolar Hoy
 let dolarHoy = 1310;
 function obtenerDolar (callback){
@@ -31,7 +30,6 @@ function obtenerDolar (callback){
     },1000) 
 }
 
-
 let precioProducto = 1500;
 
 //Task3: Obtener el precio de un producto importado
@@ -41,7 +39,6 @@ function obtenerPrecio (callback){
         callback (dataPrecio)
     },2000)
 }
-
 
 //Duda? Como haria ahora para convertir la moneda tomando los datos del dolar y de mi saldo actual?
 
@@ -68,81 +65,4 @@ function obtenerPrecio (callback){
 
 //mainCallback ();
 
-//**Parte 2 : Promesas
-//* Convertir las funciones anteriores para que devuelvan promesas.
-const promiseSaldo = new Promise ((resolve, reject) => {
-    console.log('Promesa Pendiente');
 
-    if (saldo){
-        resolve ("Saldo obtenido")
-    } else {
-         reject ("No se pudo obtener el saldo")
-    }
-})
-
-promiseSaldo 
-    .then(resultado=>{
-        console.log(resultado);
-    })
-    .catch (error =>{
-        console.log(error); 
-    })
-    .finally (()=>{
-        console.log('Se obtuvo el saldo');
-    })
-
-const promiseDolar = new Promise ((resolve, reject) => {
-    console.log('Promesa Pendiente');
-
-    if (dolarHoy){
-        resolve ("Dolar obtenido: ")
-    } else {
-        reject ("No se pudo obtener el precio del dolar")
-    }
-})
-
-promiseDolar 
-    .then(resultado=>{
-        console.log(resultado);
-    })
-    .catch (error =>{
-        console.log(error); 
-    })
-    .finally (()=>{
-        console.log('Se obtuvo el dolar');
-    })
-
-const promisePrecio = new Promise ((resolve, reject) => {
-    console.log('Promesa pendiente');
-    
-    if (precioProducto){
-        resolve ("Precio obtenido")
-    } else {
-        reject ("No se pudo obtener el precio del producto")
-    }
-})
-
-promisePrecio
-    .then (resultado =>{
-        console.log('resultado');
-    })
-    .catch (error =>{
-        console.log(error);
-    })
-    .finally (()=>{
-        console.log('Se obtuvo el precio del producto');
-        
-    })
-
-//DUDA: Como hago para integrar los tres datos y convertir el saldo a dolar
-
-
-//* Usar Promise.all para ejecutar todas las funciones en paralelo y mostrar los resultados en la consola. 
-Promise.all([promiseSaldo, promiseDolar, promisePrecio])
-    .then(resultados=>{
-        console.log(resultados);
-    })
-    .catch(error=>{
-        console.log(error);
-        
-    })
