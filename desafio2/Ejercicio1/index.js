@@ -16,8 +16,17 @@ function verificarPrimo(numero){
 }
 
 // 3. Exportar esta función utilizando CommonJS.
+//Se realiza desde el archivo con extensión .cjs. DUDA: Es esto necesario o podría haberlo hecho desde este archivo?
+
 // 4. Importar esta función utilizando ES Modules.
+//Se realiza en el archivo modules.mjs
+
 // 5. Imprimir el resultado de la función en un archivo principal utilizando ES Modules.
+
+//DUDA: NO PUDE HACERLO: HELP!!!
+
 // 6. Configurar un archivo .env para manejar variables de entorno.
+
 // 7. Crear un archivo README.md con la descripción del proyecto.
+
 // 8. Configurar un repositorio Git (aplicaciones-híbridas-comisión) y subir el proyecto a GitHub.

@@ -1,5 +1,5 @@
 {
-  "name": "desafio2", 
+  "name": "desafio2",
   "version": "1.0.0",
   "description": "desafio 2",
   "main": "index.js",
@@ -9,7 +9,8 @@
     "start": "node index.js"
   },
   "author": "Giuliana Iemma",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }
-
-
