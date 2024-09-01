@@ -3,7 +3,7 @@
 El proyecto **Desafío 2** pertenece a una serie de ejercicios prácticos realizados en la carrera *Diseño Web y Programación* en ***Escuela Da Vinci***
 
 ## Especificaciones
-Se marcarán en rojo las tareas que no hayan podido ser realizadas y a continuación se podrá leer la duda que bloqueó la finalización de la tarea.
+Se aclara qué tareas no pudieron ser realizadas y se especifican las dudas que bloquearon su finalización.
 
 ## Consignas
 1. Inicializar un proyecto Node.js en una carpeta con el nombre:”Ejercicio 1” y configurar el package.json. **REALIZADO**

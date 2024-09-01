@@ -1,3 +1,4 @@
+
 //1. Inicializar un proyecto Node.js en una carpeta con el nombre:”Ejercicio 1” y configurar el package.json.
 //2. Crear una función que verifique si un número que recibe es primo.
 
@@ -27,6 +28,10 @@ function verificarPrimo(numero){
 
 // 6. Configurar un archivo .env para manejar variables de entorno.
 
+//DUDA: NO supe como integrar las variables al resto de los archivos. Probé con lo de dotenv  y no me funcionó
+
 // 7. Crear un archivo README.md con la descripción del proyecto.
+
+
 
 // 8. Configurar un repositorio Git (aplicaciones-híbridas-comisión) y subir el proyecto a GitHub.

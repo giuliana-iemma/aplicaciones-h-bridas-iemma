@@ -1,3 +1,5 @@
+
+
 //2. Crear una función que verifique si un número que recibe es primo.
 
 function verificarPrimo(numero){
